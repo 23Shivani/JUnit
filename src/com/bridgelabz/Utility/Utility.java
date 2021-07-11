@@ -76,4 +76,33 @@ public class Utility {
 			}
 			return binary;
 		}
+//Binary
+		public static double toDecimal(char[] array, double sum) {
+			int temp = 0;
+			String powerTwo = "";
+			// System.out.println("" +array.length);
+			for (int i = array.length - 1; i >= 0; i--) {
+				if (array[i] == '1') {
+					sum = sum + (Math.pow(2, temp));
+					if (temp < array.length - 1)
+						powerTwo = powerTwo + (Math.pow(2, temp)) + "+";
+					else
+						powerTwo = powerTwo + (Math.pow(2, temp)) + "=";
+				}
+				temp++;
+			}
+			System.out.print(powerTwo);
+			System.out.println(sum);
+			return sum;
+		}
+//Power of Two
+		public static boolean isPowerOfTWo(int result) {
+			return result != 0 && ((result & (result - 1)) == 0);
+		}
+		
+		static Scanner scanner = new Scanner(System.in);
+		public static int getInteger() {
+			return scanner.nextInt();
+
+}
 }
