@@ -66,4 +66,14 @@ public class Utility {
 			}
 			System.out.println("The Result is.." + t);
 		}
+//To Binary
+		public static String toBinary(int decimal) {
+			String binary = "";
+			while (decimal > 0) {
+				binary = decimal % 2 + binary;
+				decimal = decimal / 2;
+				System.out.print(binary);
+			}
+			return binary;
+		}
 }
