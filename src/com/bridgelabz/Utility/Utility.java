@@ -3,7 +3,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Utility {
-
+// Day of the week
 		public static int dayOfWeek(int month, int date, int year) {
 			// System.out.println("Entered date is : " + month + "/" + date + "/" +
 			// year);
@@ -13,7 +13,7 @@ public class Utility {
 			int d0 = (date + x + 31 * m0 / 12) % 7;
 			return d0;
 		}
-	
+//Temperature Convert
 		public static void temperatureConversion() {
 			// TODO Auto-generated method stub
 			System.out.println("\nEnter 1 for Fahrenheit to Celsius" + "\nEnter 2 for Celsius to Fahrenheit"
@@ -47,4 +47,15 @@ public class Utility {
 			temperatureConversion();
 			scanner.close();
 			}
+		
+//Monthly Payment		
+		public static void monthlyPayment(int principalLoan, int years, double rateOfInterest) {
+
+			int n = 12 * years;
+			double result = rateOfInterest / (12 * 100);
+			double payment = (principalLoan * result) / (1 - Math.pow(1 + result, (-n)));
+
+			System.out.println("The output is...." + payment);
+		}
+
 }
